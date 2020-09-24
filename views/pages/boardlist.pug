@@ -9,7 +9,7 @@ block content
 		| or try the 
 		a(href='/all.html') overboard
 	.flexcenter.mv-10
-		form.form-post(action=`/boards.html` method='GET')
+		form.form-post(action='/boards.html' method='GET')
 			input(type='hidden' value=page)
 			.row
 				.label Search
@@ -36,7 +36,7 @@ block content
 								span.help(title='SFW') &#x1F4BC;
 								|  
 							if board.settings.unlistedLocal === true
-								span(title='Unlisted') &#x1F441;&#xFE0F;
+								span.help(title='Unlisted') &#x1F441;&#xFE0F;
 								|  
 						a(href=`/${board._id}/index.html`) /#{board._id}/ - #{board.settings.name}
 					td #{board.settings.description}
