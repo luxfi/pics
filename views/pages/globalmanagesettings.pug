@@ -39,6 +39,10 @@ block content
 				.label Filter Auto Ban Duration
 				input(type='text' name='ban_duration' placeholder='e.g. 1w' value=settings.filterBanDuration)
 			.row
+				.label Referer Check
+				label.postform-style.ph-5
+					input(type='checkbox', name='referrer_check', value='true' checked=settings.refererCheck)
+			.row
 				.label Allowed Hosts
 				textarea(name='allowed_hosts' placeholder='Newline separated') #{settings.allowedHosts.join('\n')}
 			.row
@@ -53,6 +57,103 @@ block content
 			.row
 				.label Meta URL
 				input(type='text' name='meta_url' value=settings.meta.url)
+			.row
+				.label Secure Cookies
+				label.postform-style.ph-5
+					input(type='checkbox', name='secure_cookies', value='true' checked=settings.secureCookies)
+			.row
+				.label Disable Anonymizer File Posting
+				label.postform-style.ph-5
+					input(type='checkbox', name='disable_anonymizer_file_posting', value='true' checked=settings.disableAnonymizerFilePosting)
+			.row
+				.label Stats Count Anonymizers
+				label.postform-style.ph-5
+					input(type='checkbox', name='stats_count_anonymizers', value='true' checked=settings.statsCountAnonymizers)
+			.row
+				.label Prune Files Immediately
+				label.postform-style.ph-5
+					input(type='checkbox', name='prune_immediately', value='true' checked=settings.pruneImmediately)
+			.row
+				.label Hash Images
+				label.postform-style.ph-5
+					input(type='checkbox', name='hash images' value='true' checked=settings.hashImages)
+			.row
+				.label IP Hash Perm Level
+				input(type='number' name='ip_hash_perm_level' value=settings.ipHashPermLevel)
+			.row
+				.label Delete Board Perm Level
+				input(type='number' name='delete_board_perm_level' value=settings.deleteBoardPermLevel)
+			.row
+				.label Overboard Index Thread Limit
+				input(type='number' name='overboard_limit' value=settings.overboardLimit)
+			.row
+				.label Overboard Catalog Thread Limit
+				input(type='number' name='overboard_catalog_limit' value=settings.overboardCatalogLimit)
+
+
+
+			.row
+				h4.mv-5 Ratelimit Costs
+			.row
+				.label Captcha
+				input(type='number' name='rate_limit_cost_captcha' value=settings.rateLimitCost.captcha)
+			.row
+				.label Change Board Settings
+				input(type='number' name='rate_limit_cost_board_settings' value=settings.rateLimitCost.boardSettings)
+			.row
+				.label Edit Post
+				input(type='number' name='rate_limit_cost_edit_post' value=settings.rateLimitCost.editPost)
+
+
+			.row
+				h4.mv-5 Flood Timers
+			.row
+				.label Same Content Same IP/ID
+				input(type='number' name='flood_timers_same_content_same_ip' value=settings.floodTimers.sameContentSameIp)
+			.row
+				.label Same Content Any IP/ID
+				input(type='number' name='flood_timers_same_content_any_ip' value=settings.floodTimers.sameContentAnyIp)
+			.row
+				.label Any Content Same IP/ID
+				input(type='number' name='flood_timers_any_content_same_ip' value=settings.floodTimers.anyContentSameIp)
+
+
+			.row
+				h4.mv-5 Block Bypass
+			.row
+				.label Enabled
+				label.postform-style.ph-5
+					input(type='checkbox', name='block_bypass_enabled', value='true' checked=settings.blockBypass.enabled)
+			.row
+				.label Force Anonymizers
+				label.postform-style.ph-5
+					input(type='checkbox', name='block_bypass_force_anonymizers', value='true' checked=settings.blockBypass.forceAnonymizers)
+			.row
+				.label Bypass DNSBL
+				label.postform-style.ph-5
+					input(type='checkbox', name='block_bypass_bypass_dnsbl', value='true' checked=settings.blockBypass.bypassDnsbl)
+			.row
+				.label Expire After Uses
+				input(type='number' name='captcha_options_expire_after_uses' value=settings.expireAfterUses)
+			.row
+				.label Expire After Time
+				input(type='number' name='captcha_options_expire_after_time' value=settings.captchaOptions.expireAfterTime)
+
+
+			.row
+				h4.mv-5 DNSBL
+			.row
+				.label Use DNSBLs
+				label.postform-style.ph-5
+					input(type='checkbox', name='dnsbl_enabled', value='true' checked=settings.dnsbl.enabled)
+			.row
+				.label DNSBL Addresses
+				textarea(name='dnsbl_blacklists' placeholder='Newline separated') #{settings.dnsbl.blacklists.join('\n')}
+			.row
+				.label Cache Time
+				input(type='number' name='dnsbl_cache_time' value=settings.dnsbl.cacheTime)
+
+
 			.row
 				h4.mv-5 Captcha
 			.row
