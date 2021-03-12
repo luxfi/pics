@@ -15,7 +15,7 @@ const path = require('path')
 module.exports = async (req, res, next) => {
 
 	const { globalLimits, checkRealMimeTypes } = config.get;
-	const redirect = `/${req.params.board}/manage/banners.html`;
+	const redirect = `/${req.params.board}/manage/assets.html`;
 
 	// check all mime types before we try saving anything
 	for (let i = 0; i < res.locals.numFiles; i++) {

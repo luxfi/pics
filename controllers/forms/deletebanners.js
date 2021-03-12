@@ -15,7 +15,7 @@ module.exports = async (req, res, next) => {
 		return dynamicResponse(req, res, 400, 'message', {
 			'title': 'Bad request',
 			'errors': errors,
-			'redirect': `/${req.params.board}/manage/banners.html`
+			'redirect': `/${req.params.board}/manage/assets.html`
 		})
 	}
 
@@ -24,7 +24,7 @@ module.exports = async (req, res, next) => {
 			return dynamicResponse(req, res, 400, 'message', {
 				'title': 'Bad request',
 				'message': 'Invalid banners selected',
-				'redirect': `/${req.params.board}/manage/banners.html`
+				'redirect': `/${req.params.board}/manage/assets.html`
 			})
 		}
 	}
