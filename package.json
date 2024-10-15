@@ -1,5 +1,5 @@
 {
-  "name": "jschan",
+  "name": "@luxfi/pics,
   "version": "1.6.2",
   "migrateVersion": "1.6.0",
   "description": "",
@@ -72,7 +72,7 @@
     "test:all": "jest --verbose",
     "setup": "npm i --location=global pm2 gulp && gulp generate-favicon && gulp default",
     "start": "pm2 start ecosystem.config.js --env production",
-    "start-dev": "pm2 start ecosystem.config.js --env development"
+    "dev": "pm2 start ecosystem.config.js --env development"
   },
   "author": "Thomas Lynch (fatchan) <tom@69420.me>",
   "license": "AGPL-3.0-only"
