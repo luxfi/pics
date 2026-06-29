@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="pics" width="880"></p>
+
 # pics
 
 Lux anonymous imageboard software that doesn't suck.
